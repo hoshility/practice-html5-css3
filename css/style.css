@@ -13,6 +13,7 @@ body{
   color: #333;
   font-size: 1.2 rem;
   font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  -webkit-font-smoothing: antialised; /*opacityにtransitonをかけるとsafariでtextがちらつく場合があるときの対処法*/
 }
 
 *, *::before, *::after {
@@ -104,4 +105,59 @@ logo a{
 .global-nav .nav-item a:hover{
   color: white;
   background-color: #d03c56;
+}
+
+.hidden {
+  display: none;
+}
+
+.hot-topic {
+  display: block;
+  height: 300px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.15s;
+}
+
+.hot-topic:hover {
+  opacity: 0.85;
+}
+
+.hot-topic .image {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.hot-topic .content {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+  padding: 105px 25px 0;
+  background-color: #2d3d54;
+  line-height: 1.6;
+}
+.hot-topic .title{
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 2.0rem;
+}
+.hot-topic .desc {
+  color: #ddc;
+}
+
+.hot-topic .date{
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 140px;
+  background-color: #fff;
+  color: #2d3d54;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1;
 }
